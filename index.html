@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class = 'word'>
+        _ _ _ _
+    </div>
+    <div class = 'button'>
+
+        <button onclick="test()">START</button>
+        <p id="test_obj"></p>
+         
+        <script>
+            var i = 0;
+            var txt = '이번에는 정보를 모아와 네자리 비밀번호를 만들어낼 것입니다. Ctrl + U 를 눌러 숨겨진 링크로 들어가세요.';
+            var speed = 100;
+         
+            function test() {
+                if (i < txt.length) {
+                    document.getElementById("test_obj").innerHTML += txt.charAt(i); //    숨겨진 코드
+                    i++;
+                    setTimeout(test, speed);
+                }
+            }
+        </script>
+    </body>
+    </div>
+</body>
